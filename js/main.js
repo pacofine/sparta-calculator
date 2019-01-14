@@ -1,100 +1,69 @@
-// console.log('working')
-
-// var arr = ["apple", "pear", "bannana", "jackfruit"]
-// var bool = true;
-// var num = 0;
-
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i])
-// }
-    
-// for (let i = arr.length; i > 0 ; i--) {
-//     console.log(arr[i-1])
-// }
-
-// while (num < 10) {
-//     console.log(num);
-//     num = num + 1;
-// }
 
 
-// funtion
-// var num1 = 1;
+var calc = confirm("would you like to use The calculator?")
 
-// function addNumbers(){
-//     var num2 = 2;
-//     console.log(num1);
+while (calc == true){
 
-//     function innerFunction(){
-//         var num3 = 3;
-//         console.log(num1);
-//         console.log(num2);
-//     }
-//     innerFunction()
-// }
+    var useCalc = prompt("Do you need Calculator Mode, Conversion Mode or BMI Mode")
 
-// addnumbers()
+    if (useCalc == "calculator"){
 
-// function addNumbers(num1, num2){
-// return num1 + num2;
-// }
+        function myFunction(x, y, operator) {
+            var z;
 
-// var sum = addNumbers(1, 5)
+            if (operator == "+") {
+                z = x + y;
+            }
+            else if (operator == "/") {
+                z = x / y;
+            }
+            else if (operator == "*") {
+                z = x * y;
+            }
+            else if (operator == "-") {
+                z = x - y;
+            }
 
-// console.log(sum)
-
-
-// var num1 = 1;
-
-// function addNumbers(){
-//     var num2 = 2;
-//     console.log(num1);
-
-// var name = prompt("what is your name");
-
-// function outerFunction(goblin){
-
-//     function innerFunction(troll){
-//         console.log(troll);
-
-//     }
-//     innerFunction(goblin)
-// }
-
-// outerFunction(name)
-
-//anonymouse functions 
-
-// var ananFunction = function(){
-//     return "hello world"
-// }
-
-// console.log(anonFunction());
-
-//objects 
-
-var person = {
-        name: "jack", 
-        age: 30,
-        address: {
-            house: 35,
-            street: "main street",
-            city: "newyork",
-        },
-        languiges:["html", "css", "javascript"],
-        car1: "mercedes",
-        car2: "ferrari",
-        car3: "bicycle",
-        greeting: function(){
-            console.log(this)
+            return z;
         }
+        var x, y, operator;
+        x = parseFloat(prompt("Type a number"));     
+        operator = prompt("Choose an operator");
+        y = parseFloat(prompt("Type a number"));
+
+        alert(myFunction(x, y, operator));
     }
 
-    person.greeting()
-    // console.log(person.name);
-    // console.log(person.age);
+    else if (useCalc == "conversion") {
     
-    // console.log(person["address"]["house"]);
-    // for (let i=1; i<4; i++){
-    //     console.log(person["car" + i]);
-    // }
+        function herFunction(a) {
+            var z;
+
+            // x = 1.8;
+            // y = 32;
+            z = (a * 1.8 ) + 32;
+
+            return z;
+        }
+        var a;
+        a = parseFloat(prompt("Type a number"));
+        
+        alert(herFunction(a));
+    }
+
+    else if (useCalc == "BMI") {
+    
+        function hisFunction(x, y) {
+            var z;
+
+            z = x/(y^2)
+
+            return z;
+        }
+        var x, y;
+        x = parseFloat(prompt("Your Weight in Kilograms"));     
+        y = parseFloat(prompt("Your Hight in Meters"));
+        
+        alert(hisFunction(x, y));
+    }
+}
