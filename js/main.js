@@ -1,5 +1,4 @@
-
-
+//The first q
 var calc = confirm("would you like to use The calculator?")
 
 while (calc == true) {
@@ -10,20 +9,30 @@ while (calc == true) {
 
         function myFunction(x, y, operator) {
             var z;
+            
+            // if (operator == "+") {
+            //     z = x + y;
+            // }
+            // else if (operator == "/") {
+            //     z = x / y;
+            // }
+            // else if (operator == "*") {
+            //     z = x * y;
+            // }
+            // else if (operator == "-") {
+            //     z = x - y;
+            // }
 
-            if (operator == "+") {
-                z = x + y;
+            switch(operator) {
+            case "+":
+                break;
+            case "-":
+                break;
+            case "*":
+                break;
+            case "/":
+                break;
             }
-            else if (operator == "/") {
-                z = x / y;
-            }
-            else if (operator == "*") {
-                z = x * y;
-            }
-            else if (operator == "-") {
-                z = x - y;
-            }
-
             return z;
         }
         var x, y, operator;
